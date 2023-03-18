@@ -1,0 +1,14 @@
+.title{
+    font-family: 'Times New Roman';
+    font-weight: bolder;
+    font-size: 50px;
+    text-decoration: none;
+    list-style: none;
+}
+.title-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none!important;
+    list-style: none!important;
+}
