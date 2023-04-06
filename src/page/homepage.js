@@ -7,20 +7,21 @@ import { useState } from "react";
 import {useNavigate} from "react-router"
 import ErrorMessage from "../components/ErrorMessage/ErrorMessagee";
 // import {ErrorMessage} from "../components/ErrorMessage/ErrorMessagee";
-function Home({name, setName,fetchQuestion}) {
+function Home(props) {
+    const {name, setName,fetchQuestion}=props
     const [category,setCategory]=useState("");
     const [difficulty,setDifficulty]=useState("");
     const [error,setError]=useState(false);
-const navigate = useNavigate();
+const navigate =  useNavigate();
 
-    const handleSubmit=()=>{
+    const handleSubmit= async()=>{
         if(!category || !difficulty|| !name){
             setError(true);
             return;
         }
         else {
         setError(false);
-        fetchQuestion(category,difficulty);
+       await fetchQuestion(category,difficulty);
        navigate("/quiz");
         }
     }
