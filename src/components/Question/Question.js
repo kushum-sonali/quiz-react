@@ -56,7 +56,7 @@ setError(false);
 
     const handleQuit=()=>{
         setCurrQues(0);
-        navigate="/Result"
+        navigate('/result')
         // setQuestion();
     };
 
