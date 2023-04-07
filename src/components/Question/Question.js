@@ -3,6 +3,7 @@ import ErrorMessage from "../ErrorMessage/ErrorMessagee";
 import './Question.css';
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import QuizCover from "../../animation/quizcover";
 const Question = ({
     currQues,
     setCurrQues,
@@ -37,11 +38,11 @@ setError(false);
     }
 
 
-    const nevigate=useNavigate();
+    const navigate=useNavigate();
 
     const handleNext = ()=>{
      if(currQues>8){
-        nevigate.push("/result");
+        navigate('/result')
      }
      else if(selected){
         setCurrQues(currQues+1)
@@ -55,7 +56,7 @@ setError(false);
 
     const handleQuit=()=>{
         setCurrQues(0);
-        nevigate="/Result"
+        navigate="/Result"
         // setQuestion();
     };
 
@@ -63,7 +64,7 @@ setError(false);
         <div className="question">
         <h1>Question {currQues+1}</h1>
         <div className="singleQuestion">
-            <h2>{question[currQues].question}</h2>
+        {question[currQues].question}
             <div className="options">
                 {error && <ErrorMessage>{error}</ErrorMessage>}
                 {
@@ -100,6 +101,9 @@ setError(false);
                 >{currQues>10 ? "submit" : "next Question"}</Button>
 
             </div>
+        </div>
+        <div>
+    
         </div>
         </div>
     );

@@ -15,12 +15,7 @@ class QuizCover extends React.Component {
         loop={true}
         controls={true}
         src="https://assets8.lottiefiles.com/packages/lf20_lh0a8oom.json"
-        style={
-            {
-              // height:'100%',
-              // width:'100%'
-    }
-}
+     
       ></Player>
     );
   }

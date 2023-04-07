@@ -8,7 +8,7 @@ function Footer(){
        height: 120
       }}
     >
-      <h3 className="Quiz-title">Made with by sonali 👩‍💻 </h3>
+      <h3 className="Quiz-title">Made with ❤️ by sonali 👩‍💻 </h3>
       <div
       style={{
         textAlign: "center",

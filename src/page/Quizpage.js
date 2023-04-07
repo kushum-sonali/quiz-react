@@ -17,6 +17,9 @@ setOption(
     ])
 )
     },[question,currQues]);
+    useEffect(()=>{
+    setScore(0)
+    },[])
     console.log(option);
     const handleshuffle =(options)=>{
         return options.sort(()=> Math.random()-0.5);
